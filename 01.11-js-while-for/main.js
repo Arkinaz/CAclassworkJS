@@ -29,12 +29,15 @@
 
 
 // 5
-// let i=9;
+let i=12;
+let count=0;
 
-
-// for(let a=0;a<=i;a++){
-//     if(i%a===0)console.log(a);
-// }
+for(let a=0;a<=i;a++){
+    if(i%a===0){
+        count+=1
+    };
+}
+console.log(count);
 
 // 6
 
