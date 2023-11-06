@@ -61,12 +61,43 @@
 
 //----------
 
-let numbers = [12, 45, 6, 78, 34, 99, 23];
+// let numbers = [12, 45, 6, 78, 34, 99, 23];
 
-let tek;
-let cut;
+// let tek;
+// let cut;
 
-for(let i =0; i<numbers.length;i++){
+// for(let i =0; i<numbers.length;i++){
 
     
-}
+// }
+
+
+
+//-------------
+
+
+
+let numbers = [12, 45, 6, 78, 34, 99, 23];
+
+let tek = [];
+let cut = [];
+
+for(let i=0;i<numbers.length;i++){
+    if(numbers[i]%2===0)
+        {cut.push(numbers[i])}
+        else{
+            tek.push(numbers[i])
+        }
+        }
+        
+        console.log(cut);
+        console.log(tek);
+        
+
+//let ogArray = [1, 2, 3, 4 ,5];
+//let reversArray = [];
+//for(let i=ogArray.length; i>=0; i--){
+
+  //  reversArray.push(ogArray[i]);}
+
+//console.log(reversArray);

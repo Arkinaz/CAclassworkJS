@@ -5,11 +5,11 @@
 
 // 2
 
-// let str = `arkinaz mammadova`;
+let str = `arkinaz mammadova`;
 
-// for (let i = 0; i < str.length; i++) {
-//   console.log(str[i]);
-// }
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i]);
+}
 
 
 // 3
@@ -29,15 +29,15 @@
 
 
 // 5
-let i=12;
-let count=0;
+// let i=12;
+// let count=0;
 
-for(let a=0;a<=i;a++){
-    if(i%a===0){
-        count+=1
-    };
-}
-console.log(count);
+// for(let a=0;a<=i;a++){
+//     if(i%a===0){
+//         count+=1
+//     };
+// }
+// console.log(count);
 
 // 6
 
