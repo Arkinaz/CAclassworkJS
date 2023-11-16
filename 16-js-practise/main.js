@@ -242,11 +242,15 @@ let employees = [
 
 // Random 1 den 10 a qeder reqem generate edin ve sonra arrayda hemin reqemin olub olmamasini yoxlayin
 
-let arr = [0,1,3,4,6,8,9];
-
-let randomNumber = Math.floor(Math.random()*10);
-
-let boolean = arr.includes(randomNumber);
+// let arr = [0,1,3,4,6,8,9];
 
 
-console.log(`${randomNumber}: ${boolean}`);
+
+// function checkArr(array) {
+//   let randomNumber = Math.floor(Math.random()*10);
+//   let result;
+//  array.includes(randomNumber) ? result= `${randomNumber} is in ${arr}`: result= `${randomNumber} isn't in ${arr}`
+//  return result
+// }
+
+// console.log(checkArr(arr));
