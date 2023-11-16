@@ -128,20 +128,125 @@ const users = [
 
 // 2.3.Return new array, if user is male add in front of name 'Mr', or Ms. (e.g. name:'Mr Anar', 'Ms Aynure').
 
-let arr = users.map((el) => {
-  if (el.gender === "male") {
-    return {...el, name:`Mr. ${el.name}`};
-  } 
-  else {
-    return {...el, name:`Mrs. ${el.name}`}
-  }
-  
-});
+// let arr = users.map((el) => {
+//   if (el.gender === "male") {
+//     return {...el, name:`Mr. ${el.name}`};
+//   }
+//   else {
+//     return {...el, name:`Mrs. ${el.name}`}
+//   }
 
-console.log(arr);
+// });
+
+// console.log(arr);
 
 // 2.4.Sort users by age (ascending).
 
 // let result = users.sort((a,b)=>a.age-b.age)
 
 // console.log(result);
+
+let employees = [
+  {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+];
+
+//   Find the employee who has many skills in the employees object.
+
+// let max = employees[0];
+// employees.forEach((el) => {
+//   if (el.skills.length>max.skills.length) {
+//     max = el;
+//   }
+// });
+// console.log(max);
+
+// isLoggedIn true olanları array şəklində return edin
+
+
+// let trueLoggedIn = employees.filter((el) => el.isLoggedIn===true) 
+  
+// console.log(trueLoggedIn);
+
+
+// age'ə görə sort edin
+
+// let result = employees.sort((a,b)=>a.age-b.age)
+
+// console.log(result);
+
+
+// Random 1 den 10 a qeder reqem generate edin ve sonra arrayda hemin reqemin olub olmamasini yoxlayin
+
+let arr = [0,1,3,4,6,8,9];
+
+let randomNumber = Math.floor(Math.random()*10);
+
+let boolean = arr.includes(randomNumber);
+
+
+console.log(`${randomNumber}: ${boolean}`);
