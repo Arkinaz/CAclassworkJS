@@ -242,7 +242,7 @@ let employees = [
 
 // Random 1 den 10 a qeder reqem generate edin ve sonra arrayda hemin reqemin olub olmamasini yoxlayin
 
-// let arr = [0,1,3,4,6,8,9];
+let arr = [0,1,3,4,6,8,9];
 
 
 
@@ -254,3 +254,13 @@ let employees = [
 // }
 
 // console.log(checkArr(arr));
+
+
+
+
+
+
+
+
+
+
