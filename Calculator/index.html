@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .box{
+       margin: 70px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+        background-color: rgb(235, 196, 124);
+        padding: 10px 20px 50px;
+        border-radius: 5px;
+
+      }
+      h2 {
+        text-align: center;
+      }
+      #result {
+        background-color: black;
+        color: white;
+        text-align: end;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      #value1,
+      #value2 {
+        padding: 5px;
+      }
+      button {
+        background-color: rgb(201, 201, 201);
+        border: 1px solid;
+        padding: 5px;
+      }
+      .reset{
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="box">
+    <h2>Simple Calculator</h2>
+    <input id="result" type="number" value="0" disabled />
+
+    <div>
+      <input id="value1" type="number" placeholder="value1" />
+      <input id="value2" type="number" placeholder="value2" />
+    </div>
+
+    <button class="add">addition</button>
+
+    <button class="sub">substract</button>
+
+    <button class="multi">multiply</button>
+
+    <button class="divi">division</button>
+
+    <button class="reset">RESET</button>
+
+    <script src="./main.js"></script>
+   </div>
+  </body>
+</html>

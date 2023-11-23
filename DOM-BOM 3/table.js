@@ -1,16 +1,16 @@
 let data = [
   {
-    id: 1,
-    first_name: "Erda",
-    last_name: "Waddingham",
-    email: "ewaddingham0@mysql.com",
-    gender: "Female",
-  },
-  {
     id: 2,
     first_name: "Bev",
     last_name: "Gavin",
     email: "bgavin1@archive.org",
+    gender: "Female",
+  },
+  {
+    id: 1,
+    first_name: "Erda",
+    last_name: "Waddingham",
+    email: "ewaddingham0@mysql.com",
     gender: "Female",
   },
   {
@@ -265,20 +265,20 @@ search.addEventListener("keyup", (event) => {
 let ascending = document.querySelector(".ascending");
 let sortName = document.querySelector(".sortName");
 
-
-ascending.addEventListener("click",()=>{
-  if(ascending.innerText==="Sort by ID"){
-    ascending.innerText="Sort by ID Reverse"
-    let sorted= data.sort((a,b)=>a.id-b.id)
-  drawTable(sorted);
-
-  }
-  else{
-    ascending.innerText="Sort by ID"
-    let sorted= data.sort((a,b)=>b.id-a.id)
+ascending.addEventListener("click", () => {
+  if (ascending.innerText === "Sort by ID") {
+    ascending.innerText = "Sort by ID Reverse";
+    let sorted = data.sort((a, b) => a.id - b.id);
     drawTable(sorted);
+  } else if (ascending.innerText === "Sort by ID Reverse") {
+    ascending.innerText = "default";
+    let sorted = data.sort((a, b) => b.id - a.id);
+    drawTable(sorted);
+  } else {
+    ascending.innerText = "Sort by ID";
+    let sorted = data.sort();
+    drawTable(sorted);
+
+
   }
-})
-
-
-
+});
