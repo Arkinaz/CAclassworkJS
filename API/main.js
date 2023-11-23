@@ -8,6 +8,7 @@ let form = document.querySelector("form");
 let allInputs = document.querySelectorAll("input");
 
 function drawList(data) {
+  divElem.innerHTML = "";
   data.forEach((element) => {
     divElem.innerHTML += `
     <div class="product">
