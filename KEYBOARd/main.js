@@ -6,7 +6,7 @@ window.addEventListener("keydown", function (e) {
     if (element.textContent == e.key) {
       element.style.backgroundColor = "green";
       element.style.transition = "0.3s";
-      element.style.transform = "scale(1.5)";
+      element.style.transform = "scale(1.2)";
       words.textContent += e.key;
     }
   });
