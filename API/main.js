@@ -5,7 +5,7 @@ fetch(`${BASE_URL}/products`)
 
 let divElem = document.querySelector(".products-div");
 let form = document.querySelector("form");
-let allInputs = document.querySelectorAll("input");
+let inputs = document.querySelectorAll("input");
 
 function drawList(data) {
   divElem.innerHTML = "";
@@ -25,25 +25,26 @@ function drawList(data) {
   });
 }
 
-function clickFunk(btn, id) {
-  if (confirm("Are u sure to delete customer??")) {
+function clickFunk(i, id) {
+  if (confirm("Are u sure to delete?!")) {
     fetch(`${BASE_URL}/products/${id}`, {
       method: "DELETE",
     });
-    btn.closest(".product").remove();
+    i.closest(".product").remove();
   }
 }
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
   let obj = {
-    title: allInputs[0].value,
-    price: allInputs[1].value,
-    description: allInputs[2].value,
+    title: inputs[0].value,
+    price: inputs[1].value,
+    description: inputs[2].value,
     categoryId: 1,
-    images: [allInputs[3].value],
+    images: [inputs[3].value],
   };
+
+
   fetch(`${BASE_URL}/products`, {
     method: "POST",
     headers: {
@@ -56,5 +57,5 @@ form.addEventListener("submit", function (event) {
       .then((data) => drawList(data));
   });
 
-  allInputs.forEach((item) => (item.value = ""));
+  inputs.forEach((item) => (item.value = ""));
 });
