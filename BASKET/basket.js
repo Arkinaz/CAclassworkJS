@@ -4,7 +4,7 @@ const boxes = document.querySelector(".boxes");
 
 arrNew.forEach((elem) => {
   boxes.innerHTML += `
-    <div class="col-12 col-md-6 col-lg-4">
+    <div class="col-12 col-md-6 col-lg-4 box">
     <div class="card" style="width: 18rem">
         <img src="${elem.thumbnail}" class="card-img-top" alt="..." />
         <div class="card-body">
@@ -12,7 +12,7 @@ arrNew.forEach((elem) => {
           <p class="card-text">
             ${elem.description.slice(0, 100)}...
           </p>
-          <button class="btn btn-danger" onclick=deleteClick("${
+          <button class="btn btn-danger" onclick=deleteClick(this,"${
             elem._id
           }")>REMOVE FROM BASKET</button>
         </div>
@@ -21,8 +21,8 @@ arrNew.forEach((elem) => {
     `;
 });
 
-function deleteClick(id) {
-  let filtered = arrNew.filter((elem) => elem._id !== id);
-  arrNew.push(filtered);
+function deleteClick(btn, id) {
+  arrNew = arrNew.filter((elem) => elem._id !== id);
   localStorage.setItem("filtered", JSON.stringify(arrNew));
+  btn.closest(".box").remove();
 }
