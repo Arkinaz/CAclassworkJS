@@ -344,3 +344,21 @@ function clicks(id) {
   arr.push(filtered);
   localStorage.setItem("filtered", JSON.stringify(arr));
 }
+
+let buttonDrk = document.querySelector(".button");
+let card = document.querySelector(".card");
+let bool = localStorage.getItem("dark-mode");
+
+buttonDrk.addEventListener("click", function () {
+  console.log(bool);
+  document.body.classList.toggle("dark");
+  if (bool == "true") {
+    localStorage.setItem("dark-mode", false);
+  } else {
+    localStorage.setItem("dark-mode", true);
+  }
+});
+
+// if (bool === true) {
+//   document.body.classList.add("dark");
+// }

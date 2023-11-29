@@ -26,3 +26,5 @@ function deleteClick(btn, id) {
   localStorage.setItem("filtered", JSON.stringify(arrNew));
   btn.closest(".box").remove();
 }
+
+
