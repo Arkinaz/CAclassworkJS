@@ -346,21 +346,19 @@ function clicks(id) {
 }
 
 let buttonDrk = document.querySelector(".button");
-let card = document.querySelector(".card");
 let bool = localStorage.getItem("dark-mode");
 
 
-if(bool==="true"){
+if (bool === "true") {
   document.body.classList.add("dark");
 }
+
 buttonDrk.addEventListener("click", function () {
-  console.log(bool);
   document.body.classList.toggle("dark");
-  if (bool === "true") {
-    localStorage.setItem("dark-mode", false);
-  } else {
+
+  if (document.body.classList.contains("dark")) {
     localStorage.setItem("dark-mode", true);
+  } else {
+    localStorage.setItem("dark-mode", false);
   }
 });
-
-
