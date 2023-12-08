@@ -32,3 +32,7 @@ getData("", id);
 function back() {
   window.history.back();
 }
+
+{/* <scrip>
+  3lkm
+</scrip> */}
