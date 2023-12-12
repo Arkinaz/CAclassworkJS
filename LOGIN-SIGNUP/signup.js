@@ -56,7 +56,7 @@ formElement.addEventListener("submit", function (e) {
     password: password.value,
     id: Date.now(),
   };
-  let bool = allUsers.some(
+  let bool = arr.some(
     (item) => item.email === email.value || item.userName === text.value
   );
   if (text.value !== "" || email.value !== "" || password.value !== "") {
