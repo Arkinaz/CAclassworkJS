@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "amogusafkjseshaf",
+      "surname": "Mcguire",
+      "email": "asfjkhjketfgiusgetfutgh@gmail.com",
+      "date": "12/13/2023, 5:45:33 PM",
+      "userphoto": "./assets/img/Qusto.jpg",
+      "id": 9
+    },
+    {
+      "name": "Lane",
+      "surname": "Savage",
+      "email": "pygyma@mailinator.com",
+      "date": "12/13/2023, 4:58:22 PM",
+      "userphoto": "./assets/img/Collete.jpg",
+      "id": 22
+    },
+    {
+      "name": "Washington",
+      "surname": "Lambert",
+      "email": "dehunykozo@mailinator.com",
+      "date": "12/13/2023, 5:00:52 PM",
+      "userphoto": "./assets/img/Remy - Copy.jpg",
+      "id": 23
+    }
+  ]
+}
