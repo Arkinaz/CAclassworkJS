@@ -49,11 +49,12 @@ function addFavs(id) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      let element = arr.find((elem) => elem.id === data.id);
-      if (element) {
-        alert("already faved");
+      let element = arr.find((elem) => elem.id === id);
+      if (!element) {
+        arr.push(data)
+        localStorage.setItem("faved", JSON.stringify(arr));
       } else {
-        localStorage.setItem("faved", JSON.stringify(data));
+        alert("already faved");
       }
     });
 }
