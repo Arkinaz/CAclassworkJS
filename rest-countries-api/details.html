@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+      }
+      .cont {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      header {
+        background-color: white;
+        box-shadow: 0 5px 9px rgb(221, 221, 221);
+      }
+      body {
+        background-color: rgb(241, 241, 241);
+      }
+      .hide {
+        display: none;
+      }
+      .header,
+      .body {
+        align-items: center;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+      }
+      .section {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 60px;
+        width: 100%;
+      }
+      .loading {
+        display: flex;
+        justify-content: center;
+      }
+      .p {
+        font-weight: bolder;
+      }
+      .text {
+        display: flex;
+        gap: 5px;
+      }
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .show {
+        padding: 50px 0;
+        font-size: 3rem;
+      }
+      .dark {
+        background-color: rgb(63, 62, 68);
+      }
+      .dark header,
+      .dark .back {
+        background-color: rgb(73, 72, 80);
+        box-shadow: 0 6px 9px rgb(63, 63, 66);
+        color: white;
+      }
+      .dark .back:hover {
+        background-color: rgb(96, 95, 107);
+        box-shadow: 0 6px 9px rgb(49, 49, 53);
+      }
+      .dark .show {
+        color: white;
+      }
+      .head {
+        padding: 20px 0;
+      }
+      .back {
+        cursor: pointer;
+        padding: 10px;
+        border: none;
+        box-shadow: 0 5px 9px rgb(221, 221, 221);
+        transition: 0.5s;
+      }
+      .back:hover {
+        box-shadow: 0 5px 9px rgb(190, 190, 190);
+      }
+      @media screen and (max-width: 920px) {
+        .cont {
+          padding: 0 5%;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .header {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .section {
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="cont">
+        <div class="header">
+          <h1>Where in the world?</h1>
+          <div class="btn">
+            <i class="fa-regular fa-moon"></i>
+            <span>Dark mode</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="loading">
+        <p class="show">Loading...</p>
+      </div>
+      <div class="cont">
+        <div class="head">
+          <button class="back">Go back</button>
+        </div>
+        <div class="section">
+          <div class="left">
+            <img src="../Users-crud/assets/img/Iqo - Copy.jpg" alt="" />
+          </div>
+          <div class="right">
+            <div class="up">
+              <div class="texts">
+                <div class="text">
+                  <p class="p">Native name::</p>
+                  <span>aaa</span>
+                </div>
+                <div class="text">
+                  <p class="p">Native name::</p>
+                  <span>aaa</span>
+                </div>
+                <div class="text">
+                  <p class="p">Native name::</p>
+                  <span>aaa</span>
+                </div>
+                <div class="text">
+                  <p class="p">Native name::</p>
+                  <span>aaa</span>
+                </div>
+              </div>
+              <div class="rg"></div>
+            </div>
+            <div class="down"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./details.js"></script>
+  </body>
+</html>
