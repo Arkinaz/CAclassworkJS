@@ -151,7 +151,7 @@ table {
   }
 }
 
-#carousel .carousel #box .background .box .buttons .green-btn:nth-child(1), #carousel .carousel #box .background .box .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(1) {
+#products .products .boxes .box .bottom .buttons .green-btn:nth-child(1), #products .products .boxes .box .bottom .buttons .green-btn:nth-child(2), #carousel .carousel #box .background .box .buttons .green-btn:nth-child(1), #carousel .carousel #box .background .box .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(1) {
   padding: 10px 15px;
   background-color: #7cbd1e;
   font-family: "Nunito Sans", sans-serif;
@@ -236,6 +236,7 @@ header #header-bottom .header-bottom nav ul li.hoisting .menu {
   background-color: white;
   width: 200px;
   padding: 10px;
+  z-index: 5;
   visibility: hidden;
 }
 header #header-bottom .header-bottom nav ul li.hoisting .menu li:hover a {
@@ -252,6 +253,7 @@ header #header-bottom .header-bottom nav ul li.hoisting .menu li.sub-menu .subme
   display: flex;
   flex-direction: column;
   position: absolute;
+  z-index: 5;
   left: 100px;
   width: 150px;
   opacity: 0;
@@ -332,5 +334,80 @@ header #header-bottom .header-bottom .buttons .green-btn:nth-child(2):hover {
   padding: 20px 40px;
 }
 #carousel .carousel #box .background .box .buttons .green-btn:nth-child(1):hover {
+  background-color: rgba(124, 189, 30, 0.8);
+}
+
+#products .products {
+  padding: 100px 0;
+}
+#products .products .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#products .products .boxes .box {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#products .products .boxes .box .img img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+#products .products .boxes .box .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#products .products .boxes .box .bottom h1 {
+  font-size: 2rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+#products .products .boxes .box .bottom span {
+  font-family: "Nunito Sans", sans-serif;
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+#products .products .boxes .box .bottom span a {
+  color: #7cbd1e;
+}
+#products .products .boxes .box .bottom .icons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#products .products .boxes .box .bottom .icons .fa-heart {
+  color: red;
+}
+#products .products .boxes .box .bottom .icons .fa-shopping-cart {
+  color: #7cbd1e;
+}
+#products .products .boxes .box .bottom .buttons {
+  display: flex;
+  gap: 10px;
+}
+#products .products .boxes .box .bottom .buttons .green-btn:nth-child(2) {
+  padding: 10px 15px;
+  color: black;
+  background-color: transparent;
+  border: 1px solid black;
+}
+#products .products .boxes .box .bottom .buttons .green-btn:nth-child(2):hover {
+  border: 1px solid transparent;
+  background-color: #fff;
+}
+#products .products .boxes .box .bottom .buttons .green-btn:nth-child(1) {
+  padding: 10px 15px;
+}
+#products .products .boxes .box .bottom .buttons .green-btn:nth-child(1):hover {
   background-color: rgba(124, 189, 30, 0.8);
 }/*# sourceMappingURL=main.css.map */
