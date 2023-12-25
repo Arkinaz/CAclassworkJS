@@ -42,6 +42,12 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .fa-bars {
+        display: none;
+        color: $white;
+        padding: 20px;
+        cursor: pointer;
+      }
       nav {
         ul {
           display: flex;
@@ -133,6 +139,51 @@ header {
               background-color: rgba($color: $green, $alpha: 0.8);
             }
           }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    #header-top {
+      .header-top {
+        display: none;
+      }
+    }
+    #header-bottom {
+      .header-bottom {
+        justify-content: end;
+        nav {
+          display: none;
+          &.show {
+            margin-top: 40px;
+            height: 50vh;
+            display: flex;
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            transition: all 1s ease;
+            background-color: $gray;
+            ul {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .buttons {
+          display: none;
+        }
+        .fa-bars {
+          display: block;
+        }
+        .fa-x {
+          color: white;
+          cursor: pointer;
+        
         }
       }
     }

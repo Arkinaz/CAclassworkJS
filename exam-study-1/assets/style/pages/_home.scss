@@ -69,6 +69,26 @@
 #products {
   .products {
     padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    h1 {
+      font-size: 4rem;
+      font-family: $font;
+    }
+    input {
+      padding: 10px 20px;
+      color: $white;
+      background-color: $green;
+      border: none;
+      border-radius: 10px;
+      font-family: $font;
+      &::placeholder {
+        color: $white;
+        font-family: $font;
+      }
+    }
     .boxes {
       display: flex;
       flex-wrap: wrap;

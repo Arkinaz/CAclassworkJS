@@ -1,21 +1,3 @@
-let subMenu = document.querySelector(".menu");
-let liElem = document.querySelector(".hoisting");
-let subMenu2 = document.querySelector(".submenu");
-let liElem2 = document.querySelector(".sub-menu");
-
-liElem.addEventListener("mouseenter", function () {
-  subMenu.style.visibility = "visible";
-});
-liElem.addEventListener("mouseleave", function () {
-  subMenu.style.visibility = "hidden";
-});
-liElem2.addEventListener("mouseenter", function () {
-  subMenu2.style.opacity = "1";
-});
-liElem2.addEventListener("mouseleave", function () {
-  subMenu2.style.opacity = "0";
-});
-
 let products = document.querySelector(".boxes");
 const BASE_URL = "http://localhost:3000";
 
@@ -23,6 +5,7 @@ async function getData() {
   let resp = await axios(`${BASE_URL}/products`);
   console.log(resp.data);
   drawBoxes(resp.data);
+  arr = resp.data;
 }
 
 function drawBoxes(data) {
@@ -43,12 +26,16 @@ function drawBoxes(data) {
         <a href="./details.html?id=${e.id}">see more</a></span
       >
       <div class="icons">
-        <i class="fa-regular fa-heart"></i>
+        <i class="${
+          e.isFaved ? "fa-solid fa-heart" : "fa-regular fa-heart"
+        }" onclick="isFaved(${e.id})"></i>
         <i class="fa-solid fa-shopping-cart"></i>
       </div>
       <div class="buttons">
-        <button class="green-btn">Edit Product</button>
-        <button class="green-btn">Delete Product</button>
+        <a href="./form.html?id=${e.id}" class="green-btn">Edit Product</a>
+        <button class="green-btn" onclick="deleteBtn(${
+          e.id
+        },this)">Delete Product</button>
       </div>
     </div>
   </div>
@@ -56,3 +43,28 @@ function drawBoxes(data) {
   });
 }
 getData();
+
+let search = document.querySelector(".search");
+
+search.addEventListener("input", function (e) {
+  let filtered = arr.filter((item) =>
+    item.title.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+  );
+  drawBoxes(filtered);
+});
+
+function deleteBtn(id, btn) {
+  if (confirm("Are u sure to delet this product?")) {
+    axios.delete(`${BASE_URL}/products/${id}`);
+    btn.querySelector(".box").remove();
+  }
+}
+
+async function isFaved(id) {
+  let resp = await axios.get(`${BASE_URL}/products/${id}`);
+  if (resp.data.isFaved === false) {
+    axios.patch(`${BASE_URL}/products/${id}`, { isFaved: true });
+  } else {
+    axios.patch(`${BASE_URL}/products/${id}`, { isFaved: false });
+  }
+}

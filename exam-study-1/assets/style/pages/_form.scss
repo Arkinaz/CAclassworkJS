@@ -1,0 +1,36 @@
+#form {
+  height: 70vh;
+  @include disp;
+  justify-content: flex-start;
+  width: 100%;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    width: 500px;
+
+    input {
+      padding: 10px 20px;
+      color: $white;
+      background-color: $green;
+      border: none;
+      border-radius: 10px;
+      font-family: $font;
+      width: 100%;
+      &::placeholder {
+        color: $white;
+        font-family: $font;
+      }
+    }
+    .green-btn {
+      @extend %button;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    @media only screen and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+}

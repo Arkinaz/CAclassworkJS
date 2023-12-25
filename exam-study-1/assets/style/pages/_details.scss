@@ -1,0 +1,53 @@
+#details {
+  .details {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      .img {
+        img {
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+        }
+      }
+      .bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        h1 {
+          font-size: 2rem;
+          font-family: $font;
+        }
+        span {
+          font-family: $font;
+          opacity: 0.6;
+          font-size: 0.9rem;
+          a {
+            color: $green;
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+        .green-btn {
+          @extend %button;
+          padding: 10px 15px;
+
+          &:hover {
+            background-color: rgba($color: $green, $alpha: 0.8);
+          }
+        }
+      }
+    }
+  }
+}
