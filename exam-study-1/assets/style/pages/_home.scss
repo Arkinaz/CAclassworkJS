@@ -1,0 +1,67 @@
+#carousel {
+  .carousel {
+    #box {
+      height: 80vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+
+      background-image: url(https://preview.colorlib.com/theme/server/images/hero_bg_2.jpg);
+      &.box2 {
+        background-image: url(https://preview.colorlib.com/theme/server/images/hero_bg_1.jpg);
+        p {
+          color: $white;
+          font-family: $font;
+          font-size: 2rem;
+        }
+      }
+
+      .background {
+        background-color: rgba($color: #000000, $alpha: 0.26);
+        height: 80vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 30px;
+          h1 {
+            color: $white;
+            font-size: 5rem;
+            font-family: $font;
+          }
+          .buttons {
+            gap: 10px;
+
+            .green-btn {
+              &:nth-child(2) {
+                @extend %button;
+                padding: 20px 40px;
+
+                background-color: transparent;
+                border: 1px solid $white;
+                &:hover {
+                  border: 1px solid transparent;
+                  background-color: $white;
+                  color: black;
+                }
+              }
+              &:nth-child(1) {
+                @extend %button;
+                padding: 20px 40px;
+                &:hover {
+                  background-color: rgba($color: $green, $alpha: 0.8);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

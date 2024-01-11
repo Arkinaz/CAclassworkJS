@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  outline: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .cont {
+    padding: 0 5%;
+  }
+}
+
+#carousel .carousel #box .background .box .buttons .green-btn:nth-child(1), #carousel .carousel #box .background .box .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(2), header #header-bottom .header-bottom .buttons .green-btn:nth-child(1) {
+  padding: 10px 15px;
+  background-color: #7cbd1e;
+  font-family: "Nunito Sans", sans-serif;
+  color: #fff;
+  transition: 0.5s;
+  border: 1px solid transparent;
+}
+
+header #header-top {
+  background-color: white;
+}
+header #header-top .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+header #header-top .header-top h1 {
+  font-size: 2rem;
+  display: flex;
+  gap: 10px;
+  font-family: "Nunito Sans", sans-serif;
+}
+header #header-top .header-top .links {
+  display: flex;
+  gap: 40px;
+}
+header #header-top .header-top .links .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header #header-top .header-top .links .link .fa-solid {
+  font-size: 2rem;
+}
+header #header-top .header-top .links .link .text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+header #header-top .header-top .links .link .text span {
+  font-family: "Nunito Sans", sans-serif;
+  opacity: 0.4;
+  font-size: 0.9rem;
+}
+header #header-top .header-top .links .link .text p {
+  font-family: "Nunito Sans", sans-serif;
+}
+header #header-bottom {
+  background-color: #343a40;
+}
+header #header-bottom .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #header-bottom .header-bottom nav ul {
+  display: flex;
+  gap: 20px;
+}
+header #header-bottom .header-bottom nav ul li a {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Nunito Sans", sans-serif;
+  transition: 0.3s;
+}
+header #header-bottom .header-bottom nav ul li:hover a {
+  color: white;
+}
+header #header-bottom .header-bottom nav ul li.li-elem {
+  padding: 20px;
+}
+header #header-bottom .header-bottom nav ul li.hoisting {
+  position: relative;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20%;
+  top: 100%;
+  background-color: white;
+  width: 200px;
+  padding: 10px;
+  visibility: hidden;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li:hover a {
+  color: #7cbd1e;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li a {
+  color: black;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li.sub-menu {
+  position: relative;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li.sub-menu .submenu {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 100px;
+  width: 150px;
+  opacity: 0;
+  background-color: white;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li.sub-menu .submenu li a {
+  color: black;
+}
+header #header-bottom .header-bottom nav ul li.hoisting .menu li.sub-menu .submenu li:hover a {
+  color: #7cbd1e;
+}
+header #header-bottom .header-bottom .buttons {
+  display: flex;
+  gap: 10px;
+}
+header #header-bottom .header-bottom .buttons .green-btn:nth-child(1) {
+  background-color: transparent;
+  border: 1px solid #7cbd1e;
+}
+header #header-bottom .header-bottom .buttons .green-btn:nth-child(1):hover {
+  border: 1px solid transparent;
+  background-color: #7cbd1e;
+}
+header #header-bottom .header-bottom .buttons .green-btn:nth-child(2):hover {
+  background-color: rgba(124, 189, 30, 0.8);
+}
+
+#carousel .carousel #box {
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(https://preview.colorlib.com/theme/server/images/hero_bg_2.jpg);
+}
+#carousel .carousel #box.box2 {
+  background-image: url(https://preview.colorlib.com/theme/server/images/hero_bg_1.jpg);
+}
+#carousel .carousel #box.box2 p {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+}
+#carousel .carousel #box .background {
+  background-color: rgba(0, 0, 0, 0.26);
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carousel .carousel #box .background .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#carousel .carousel #box .background .box h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+#carousel .carousel #box .background .box .buttons {
+  gap: 10px;
+}
+#carousel .carousel #box .background .box .buttons .green-btn:nth-child(2) {
+  padding: 20px 40px;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+#carousel .carousel #box .background .box .buttons .green-btn:nth-child(2):hover {
+  border: 1px solid transparent;
+  background-color: #fff;
+  color: black;
+}
+#carousel .carousel #box .background .box .buttons .green-btn:nth-child(1) {
+  padding: 20px 40px;
+}
+#carousel .carousel #box .background .box .buttons .green-btn:nth-child(1):hover {
+  background-color: rgba(124, 189, 30, 0.8);
+}/*# sourceMappingURL=main.css.map */

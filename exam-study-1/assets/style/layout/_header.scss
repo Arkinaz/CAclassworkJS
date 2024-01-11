@@ -1,0 +1,138 @@
+header {
+  #header-top {
+    background-color: white;
+    .header-top {
+      @include disp(space-between);
+      padding: 20px 0;
+      h1 {
+        font-size: 2rem;
+        display: flex;
+        gap: 10px;
+        font-family: $font;
+      }
+      .links {
+        display: flex;
+        gap: 40px;
+        .link {
+          @include disp;
+          gap: 10px;
+          .fa-solid {
+            font-size: 2rem;
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            span {
+              font-family: $font;
+              opacity: 0.4;
+              font-size: 0.9rem;
+            }
+            p {
+              font-family: $font;
+            }
+          }
+        }
+      }
+    }
+  }
+  #header-bottom {
+    background-color: $gray;
+    .header-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      nav {
+        ul {
+          display: flex;
+          gap: 20px;
+          li {
+            a {
+              color: rgba($color: $white, $alpha: 0.5);
+              font-family: $font;
+              transition: 0.3s;
+            }
+            &:hover {
+              a {
+                color: rgba($color: $white, $alpha: 1);
+              }
+            }
+            &.li-elem {
+              padding: 20px;
+            }
+            &.hoisting {
+              position: relative;
+              .menu {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                left: 20%;
+                top: 100%;
+                background-color: white;
+                width: 200px;
+                padding: 10px;
+                visibility: hidden;
+
+                li {
+                  &:hover {
+                    a {
+                      color: $green;
+                    }
+                  }
+                  a {
+                    color: black;
+                  }
+                  &.sub-menu {
+                    position: relative;
+                    .submenu {
+                      padding: 10px;
+                      display: flex;
+                      flex-direction: column;
+                      position: absolute;
+                      left: 100px;
+                      width: 150px;
+                      opacity: 0;
+                      background-color: white;
+                      li {
+                        a {
+                          color: black;
+                        }
+                        &:hover {
+                          a {
+                            color: $green;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+
+        .green-btn {
+          &:nth-child(1) {
+            @extend %button;
+            background-color: transparent;
+            border: 1px solid $green;
+            &:hover {
+              border: 1px solid transparent;
+              background-color: $green;
+            }
+          }
+          &:nth-child(2) {
+            @extend %button;
+            &:hover {
+              background-color: rgba($color: $green, $alpha: 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
