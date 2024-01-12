@@ -1,0 +1,115 @@
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 9px gray;
+  #header-top {
+    .header-top {
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid gray;
+      align-items: center;
+
+      p {
+        font-family: $font;
+        color: $blue;
+
+        em {
+          font-weight: 700;
+        }
+      }
+      .icons {
+        i {
+          padding: 0 10px;
+          transition: 0.5s;
+          color: $blue;
+          &:hover {
+            transform: rotateY(180deg);
+          }
+        }
+      }
+    }
+  }
+  #header-bottom {
+    .header-bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 0;
+      align-items: center;
+
+      .left {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        nav {
+          ul {
+            display: flex;
+            align-items: center;
+
+            gap: 20px;
+            li {
+              a {
+                font-family: $font;
+                color: $blue;
+              }
+              &.li-elem {
+                position: relative;
+                ul {
+                  &.submenu {
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    align-items: flex-start;
+                    padding: 10px;
+                    background-color: $white;
+                    width: 130px;
+                    li {
+                      padding: 10px 0;
+
+                      a {
+                        transition: 0.5s;
+                        &:hover {
+                          color: $lightblue;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .btn-type-1 {
+          @extend %button-one;
+        }
+        .link {
+          display: flex;
+          gap: 10px;
+          .fa-headphones {
+            font-size: 2rem;
+          }
+          .text {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            span {
+              opacity: 0.6;
+              font-family: $font;
+            }
+            p {
+              color: $blue;
+              font-family: $font;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

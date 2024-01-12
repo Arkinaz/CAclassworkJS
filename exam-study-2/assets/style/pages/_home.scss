@@ -1,0 +1,86 @@
+#home {
+  background-image: url(https://preview.colorlib.com/theme/itlock/assets/img/hero/h1_hero1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    font-family: $font;
+    align-items: flex-start;
+    padding: 20% 0;
+    width: 50%;
+    gap: 20px;
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+    span {
+      line-height: 2rem;
+    }
+  }
+}
+
+#products {
+  padding: 100px 0;
+  .products {
+    .top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 40px;
+      .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        p {
+          color: $blue;
+          letter-spacing: 0.7rem;
+          font-family: $font;
+        }
+        h1 {
+          font-family: $font;
+          color: $blue;
+          font-size: 3rem;
+        }
+      }
+      span {
+        width: 40%;
+        line-height: 1.5rem;
+        font-family: $font;
+      }
+    }
+    .boxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      .box {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        gap: 20px;
+        h1 {
+          color: $blue;
+          font-size: 2rem;
+          font-family: $font;
+        }
+        p {
+          font-family: $font;
+        }
+        img {
+          width: 100%;
+        }
+        .buttons {
+          .btn-type-1 {
+            @extend %button-one;
+          }
+        }
+      }
+    }
+  }
+}

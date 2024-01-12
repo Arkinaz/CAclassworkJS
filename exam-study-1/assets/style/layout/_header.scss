@@ -154,6 +154,7 @@ header {
         justify-content: end;
         nav {
           display: none;
+
           &.show {
             margin-top: 40px;
             height: 50vh;
@@ -171,6 +172,9 @@ header {
               flex-direction: column;
               justify-content: center;
               align-items: center;
+              li {
+                padding: 0;
+              }
             }
           }
         }
@@ -183,7 +187,6 @@ header {
         .fa-x {
           color: white;
           cursor: pointer;
-        
         }
       }
     }

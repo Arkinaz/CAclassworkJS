@@ -315,6 +315,9 @@ header #header-bottom .header-bottom .buttons .green-btn:nth-child(2):hover {
     justify-content: center;
     align-items: center;
   }
+  header #header-bottom .header-bottom nav.show ul li {
+    padding: 0;
+  }
   header #header-bottom .header-bottom .buttons {
     display: none;
   }
@@ -403,10 +406,6 @@ header #header-bottom .header-bottom .buttons .green-btn:nth-child(2):hover {
   font-family: "Nunito Sans", sans-serif;
 }
 #products .products input::-moz-placeholder {
-  color: #fff;
-  font-family: "Nunito Sans", sans-serif;
-}
-#products .products input:-ms-input-placeholder {
   color: #fff;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -612,10 +611,6 @@ header #header-bottom .header-bottom .buttons .green-btn:nth-child(2):hover {
   width: 100%;
 }
 #form form input::-moz-placeholder {
-  color: #fff;
-  font-family: "Nunito Sans", sans-serif;
-}
-#form form input:-ms-input-placeholder {
   color: #fff;
   font-family: "Nunito Sans", sans-serif;
 }

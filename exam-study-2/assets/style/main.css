@@ -1,0 +1,513 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1199px) {
+  .cont {
+    padding: 0 5%;
+  }
+}
+
+#form form .btn-type-1, #products .products .boxes .box .buttons .btn-type-1, header #header-bottom .header-bottom .right .btn-type-1 {
+  padding: 10px 30px;
+  border: 2px solid #00316e;
+  color: #00316e;
+  font-family: "Fira Sans", sans-serif;
+  background-color: transparent;
+  font-weight: 500;
+  transition: 0.5s;
+}
+#form form .btn-type-1:hover, #products .products .boxes .box .buttons .btn-type-1:hover, header #header-bottom .header-bottom .right .btn-type-1:hover {
+  background-color: #316ec2;
+  border: 2px solid #316ec2;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 9px gray;
+}
+header #header-top .header-top {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+header #header-top .header-top p {
+  font-family: "Fira Sans", sans-serif;
+  color: #00316e;
+}
+header #header-top .header-top p em {
+  font-weight: 700;
+}
+header #header-top .header-top .icons i {
+  padding: 0 10px;
+  transition: 0.5s;
+  color: #00316e;
+}
+header #header-top .header-top .icons i:hover {
+  transform: rotateY(180deg);
+}
+header #header-bottom .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  align-items: center;
+}
+header #header-bottom .header-bottom .left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+header #header-bottom .header-bottom .left nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+header #header-bottom .header-bottom .left nav ul li a {
+  font-family: "Fira Sans", sans-serif;
+  color: #00316e;
+}
+header #header-bottom .header-bottom .left nav ul li.li-elem {
+  position: relative;
+}
+header #header-bottom .header-bottom .left nav ul li.li-elem ul.submenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  align-items: flex-start;
+  padding: 10px;
+  background-color: #fff;
+  width: 130px;
+}
+header #header-bottom .header-bottom .left nav ul li.li-elem ul.submenu li {
+  padding: 10px 0;
+}
+header #header-bottom .header-bottom .left nav ul li.li-elem ul.submenu li a {
+  transition: 0.5s;
+}
+header #header-bottom .header-bottom .left nav ul li.li-elem ul.submenu li a:hover {
+  color: #316ec2;
+}
+header #header-bottom .header-bottom .right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+header #header-bottom .header-bottom .right .link {
+  display: flex;
+  gap: 10px;
+}
+header #header-bottom .header-bottom .right .link .fa-headphones {
+  font-size: 2rem;
+}
+header #header-bottom .header-bottom .right .link .text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+header #header-bottom .header-bottom .right .link .text span {
+  opacity: 0.6;
+  font-family: "Fira Sans", sans-serif;
+}
+header #header-bottom .header-bottom .right .link .text p {
+  color: #00316e;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+}
+
+footer {
+  padding: 100px 0 0 0;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+footer .footer-top .part {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 25px;
+}
+footer .footer-top .part .email {
+  display: flex;
+}
+footer .footer-top .part .email input {
+  padding: 20px;
+  border: 1px solid gray;
+}
+footer .footer-top .part .email .button {
+  padding: 0 30px;
+  border: none;
+  background-color: #316ec2;
+  color: #fff;
+  font-size: 1.6rem;
+}
+footer .footer-top .part label {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+}
+footer .footer-top .part span {
+  color: #00316e;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.5rem;
+}
+footer .footer-top .part nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .footer-top .part nav ul li a {
+  font-family: "Fira Sans", sans-serif;
+  color: black;
+  opacity: 0.6;
+  transition: 0.5s;
+  border-bottom: 1px solid transparent;
+}
+footer .footer-top .part nav ul li a:hover {
+  border-bottom: 1px solid;
+}
+footer .footer-top .part .icons {
+  display: flex;
+  gap: 10px;
+}
+footer .footer-top .part .icons .icon {
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+footer .footer-top .part .icons .icon:nth-child(1) {
+  background-color: #3b5998;
+}
+footer .footer-top .part .icons .icon:nth-child(2) {
+  background-color: #ff0000;
+}
+footer .footer-top .part .icons .icon:nth-child(3) {
+  background-color: #0077b5;
+}
+footer .footer-top .part .icons .icon:nth-child(4) {
+  background-color: #405de6;
+}
+footer .footer-top .part .icons .icon i {
+  transition: 0.5s;
+}
+footer .footer-top .part .icons .icon:hover i {
+  transform: rotateY(180deg);
+}
+footer .footer-bottom {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+footer .footer-bottom span {
+  display: flex;
+  gap: 5px;
+  font-family: "Fira Sans", sans-serif;
+}
+footer .footer-bottom span .blue {
+  color: #316ec2;
+}
+footer .footer-bottom .fa-arrow-up {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  color: white;
+  background-color: #316ec2;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+#home {
+  background-image: url(https://preview.colorlib.com/theme/itlock/assets/img/hero/h1_hero1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#home .home {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  align-items: flex-start;
+  padding: 20% 0;
+  width: 50%;
+  gap: 20px;
+}
+#home .home h1 {
+  font-size: 4rem;
+}
+#home .home p {
+  font-size: 2rem;
+}
+#home .home span {
+  line-height: 2rem;
+}
+
+#products {
+  padding: 100px 0;
+}
+#products .products .top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+#products .products .top .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#products .products .top .left p {
+  color: #00316e;
+  letter-spacing: 0.7rem;
+  font-family: "Fira Sans", sans-serif;
+}
+#products .products .top .left h1 {
+  font-family: "Fira Sans", sans-serif;
+  color: #00316e;
+  font-size: 3rem;
+}
+#products .products .top span {
+  width: 40%;
+  line-height: 1.5rem;
+  font-family: "Fira Sans", sans-serif;
+}
+#products .products .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#products .products .boxes .box {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  gap: 20px;
+}
+#products .products .boxes .box h1 {
+  color: #00316e;
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+}
+#products .products .boxes .box p {
+  font-family: "Fira Sans", sans-serif;
+}
+#products .products .boxes .box img {
+  width: 100%;
+}
+#details {
+  padding: 100px 0;
+}
+#details .details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#details .details .box {
+  display: flex;
+  gap: 20px;
+}
+#details .details .box div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#details .details .box div h1 {
+  color: #00316e;
+  font-size: 2rem;
+  font-family: "Fira Sans", sans-serif;
+}
+#details .details .box div p {
+  font-family: "Fira Sans", sans-serif;
+}
+#details .details .box img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+#form form {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+#form form label {
+  font-size: 3rem;
+  font-family: "Fira Sans", sans-serif;
+  color: #00316e;
+}
+#form form input {
+  width: 50%;
+  padding: 20px;
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+  background-color: #316ec2;
+  color: #fff;
+}
+#form form input::-moz-placeholder {
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+}
+#form form input::placeholder {
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+}/*# sourceMappingURL=main.css.map */

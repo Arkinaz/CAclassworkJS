@@ -1,0 +1,15 @@
+%button-one {
+  padding: 10px 30px;
+  border: 2px solid $blue;
+  color: $blue;
+  font-family: $font;
+  background-color: transparent;
+  font-weight: 500;
+  transition: 0.5s;
+  &:hover {
+    background-color: $lightblue;
+    border: 2px solid $lightblue;
+
+    color: $white;
+  }
+}

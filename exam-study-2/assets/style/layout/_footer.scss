@@ -1,0 +1,113 @@
+footer {
+  padding: 100px 0 0 0;
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 50px;
+    .part {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      gap: 25px;
+      .email {
+        display: flex;
+        input {
+          padding: 20px;
+          border: 1px solid gray;
+        }
+        .button {
+          padding: 0 30px;
+          border: none;
+          background-color: $lightblue;
+          color: $white;
+          font-size: 1.6rem;
+        }
+      }
+      label {
+        font-family: $font;
+        font-weight: 500;
+      }
+      span {
+        color: $blue;
+        font-family: $font;
+        line-height: 1.5rem;
+      }
+      nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          li {
+            a {
+              font-family: $font;
+              color: black;
+              opacity: 0.6;
+              transition: 0.5s;
+              border-bottom: 1px solid transparent;
+
+              &:hover {
+                border-bottom: 1px solid;
+              }
+            }
+          }
+        }
+      }
+      .icons {
+        display: flex;
+        gap: 10px;
+        .icon {
+          padding: 10px;
+          border-radius: 50%;
+          color: white;
+          cursor: pointer;
+          &:nth-child(1) {
+            background-color: #3b5998;
+          }
+          &:nth-child(2) {
+            background-color: #ff0000;
+          }
+          &:nth-child(3) {
+            background-color: #0077b5;
+          }
+          &:nth-child(4) {
+            background-color: #405de6;
+          }
+          i {
+            transition: 0.5s;
+          }
+          &:hover {
+            i {
+              transform: rotateY(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    span {
+      display: flex;
+      gap: 5px;
+      font-family: $font;
+      .blue {
+        color: $lightblue;
+      }
+    }
+    .fa-arrow-up {
+      position: fixed;
+      bottom: 5%;
+      right: 5%;
+      cursor: pointer;
+      color: white;
+      background-color: $lightblue;
+      padding: 20px;
+      border-radius: 50%;
+    }
+  }
+}

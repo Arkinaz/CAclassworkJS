@@ -1,0 +1,29 @@
+#details {
+  padding: 100px 0;
+  .details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    .box {
+      display: flex;
+      gap: 20px;
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h1 {
+          color: $blue;
+          font-size: 2rem;
+          font-family: $font;
+        }
+        p {
+          font-family: $font;
+        }
+      }
+      img {
+        width: 50%;
+        border-radius: 20px;
+      }
+    }
+  }
+}
